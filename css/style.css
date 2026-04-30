@@ -131,6 +131,24 @@ main {
   margin: 2% 0;
 }
 
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-gallery img {
+  width: 300px;
+  height: auto;
+  flex-grow: 0;
+  max-width: 45%;
+  object-fit: cover;
+  border: 2px solid #549746;  
+  border-radius: 40px;
+  margin: 1% 1%;
+}
+
 footer {
   background-color: #d7f0d9;
   padding: 4vh 1vw 4vh 1vw;
