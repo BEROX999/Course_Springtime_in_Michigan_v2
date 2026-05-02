@@ -15,9 +15,9 @@ body {
 nav {
   display: inline-block;
   width: 80%;
-  margin: 0 auto;
+  margin: 0;
+  height: auto;
   text-align: center;
-  color: #56BACE;
   background-color: #BCF3B0;
   padding: 1% 2% 1% 2%;
   border-radius: 80px;
@@ -30,24 +30,27 @@ main p {
   margin: 0 4% 0 4%;
 }
 
-.flex {
+nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 80%;
+  justify-content: space-around;
+  list-style-type: none;
   align-items: center;
-  padding: 0%;
-  margin: 0;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.flex li {
+nav ul li {
+  display: list-item;
   width: auto;
   line-height: 2em;
   transition: all 0.3s ease-in-out; 
-  margin: 3% 1% 1% 1%;
+  margin: 0;
   padding: 0%;
 }
 
-.flex li::after {
+nav ul li::after {
   content: '';
   display: block;
   position: absolute;
@@ -61,20 +64,14 @@ main p {
   transition: transform 0.3s ease-in-out;
 }
 
-.flex li:hover {
+nav ul li:hover {
   transform: translateY(-4px);
 }
 
-.flex li:hover::after {
+nav ul li:hover::after {
   transform: scaleX(1);
 }
 
-ul {
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-  margin: auto
-}
 
 /* li {
   display: inline-flex;
@@ -94,7 +91,6 @@ ul {
 
 header {
   text-align: center;
-
 }
 
 h1 {
@@ -119,7 +115,9 @@ main {
   display: grid;
   grid-template-columns: 40% 40%;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 30px;
   margin: 4% 10%;
 }
 
@@ -131,19 +129,15 @@ main {
   margin: 2% 0;
 }
 
-.flex-gallery {
+.flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
 }
 
-.flex-gallery img {
-  width: 300px;
-  height: auto;
-  flex-grow: 0;
-  max-width: 45%;
-  object-fit: cover;
+.flex img {
+  width: 12em;
+  height: 16em;
   border: 2px solid #549746;  
   border-radius: 40px;
   margin: 1% 1%;
@@ -194,12 +188,10 @@ a:hover {
 }
 
 nav img {
-  display: inline-block;
+  float: right;
   width: 10%;
-  position: relative;
-  top: 20px;
-  margin: 0 auto;
-  height: auto;
+  position:relative;
+  margin: 0 0 3% 0;
   border: 2px solid #549746;  
   border-radius: 40px;
   box-shadow: 0 6px 12px rgba(42, 37, 36, 0.3);
